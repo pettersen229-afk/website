@@ -2,29 +2,153 @@
 <html lang="no">
 <head>
   <meta charset="UTF-8">
-  <title>Marhaugengård</title>
+  <title>Marhaugengård – Økologisk gårdsdrift</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
       margin: 0;
-      padding: 40px;
+      font-family: Arial, sans-serif;
+      background-color: #f7f8f5;
+      color: #333;
+      line-height: 1.7;
     }
-    .box {
-      max-width: 800px;
-      background: white;
-      padding: 30px;
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("https://images.unsplash.com/photo-1500595046743-cd271d694d30");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 120px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
       margin: auto;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      color: #4a6b4f;
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
       border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .prices {
+      background: #eef2ec;
+      border-radius: 8px;
+      padding: 30px;
+    }
+
+    footer {
+      background: #2f4033;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer p {
+      margin: 5px 0;
     }
   </style>
 </head>
+
 <body>
-  <div class="box">
-    <h1>Marhaugengård</h1>
-    <p>Velkommen til hjemmesiden for Marhaugengård.</p>
-    <p>Mer informasjon kommer snart.</p>
+
+<header>
+  <h1>Marhaugengård</h1>
+  <p>Økologisk drift med respekt for natur, dyr og mennesker</p>
+</header>
+
+<section>
+  <h2>Om Marhaugengård</h2>
+  <p>
+    Marhaugengård er en småskala bondegård med fokus på økologisk drift og bærekraftige løsninger.
+    Vi produserer mat og råvarer med omtanke for naturen, dyrene og framtidige generasjoner.
+  </p>
+</section>
+
+<section>
+  <h2>Våre produkter</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>🥚 Egg</h3>
+      <p>Egg fra frittgående høner med fokus på god dyrevelferd og naturlig fôr.</p>
+    </div>
+    <div class="card">
+      <h3>🪵 Ved</h3>
+      <p>Kortreist ved produsert med hensyn til skog og miljø.</p>
+    </div>
+    <div class="card">
+      <h3>🥕 Grønnsaker</h3>
+      <p>Sesongbasert grønnsaksproduksjon og foredlede produkter.</p>
+    </div>
+    <div class="card">
+      <h3>🐝 På vei</h3>
+      <p>Bifolk og mulig villsau – for økt biologisk mangfold.</p>
+    </div>
   </div>
+</section>
+
+<section>
+  <h2>Priser</h2>
+  <div class="prices">
+    <p><strong>Egg:</strong> xx kr per brett</p>
+    <p><strong>Ved:</strong> xx kr per sekk / favn</p>
+    <p><strong>Grønnsaker:</strong> Pris etter sesong og tilgjengelighet</p>
+    <p><em>Ta kontakt for bestilling eller mer informasjon.</em></p>
+  </div>
+</section>
+
+<section>
+  <h2>Våre verdier</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>🌱 Økologisk</h3>
+      <p>Vi følger naturens egne kretsløp.</p>
+    </div>
+    <div class="card">
+      <h3>🐓 Dyrevelferd</h3>
+      <p>God plass, ro og naturlige omgivelser.</p>
+    </div>
+    <div class="card">
+      <h3>🌍 Langsiktighet</h3>
+      <p>Vi forvalter jorda med tanke på framtiden.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Marhaugengård</strong></p>
+  <p>📍 Adresse kommer</p>
+  <p>📞 Telefon | 📧 E-post</p>
+</footer>
+
 </body>
 </html>
+
