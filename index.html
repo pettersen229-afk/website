@@ -13,62 +13,53 @@
       color: #333;
       line-height: 1.7;
     }
+
+    /* TOPPMENY */
     .top-menu {
-  background: #f7f8f5;
-  border-bottom: 1px solid #e0e6dc;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+      background: #f7f8f5;
+      border-bottom: 1px solid #e0e6dc;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-.menu-inner {
-  max-width: 1000px;
-  margin: auto;
-  padding: 12px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .menu-inner {
+      max-width: 1000px;
+      margin: auto;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.logo {
-  font-weight: bold;
-  color: #4a6b4f;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
+    .logo {
+      font-weight: bold;
+      color: #4a6b4f;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
 
-.menu-links a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #4a5c4f;
-  font-size: 0.95rem;
-}
+    .menu-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #4a5c4f;
+      font-size: 0.95rem;
+    }
 
-.menu-links a:hover {
-  text-decoration: underline;
-}
+    .menu-links a:hover {
+      text-decoration: underline;
+    }
 
-    <nav class="top-menu">
-  <div class="menu-inner">
-    <a href="index.html" class="logo">Marhaugengård</a>
-
-    <div class="menu-links">
-      <a href="index.html">Hjem</a>
-      <a href="#produkter">Produkter</a>
-      <a href="#verdier">Verdier</a>
-      <a href="#kontakt">Kontakt</a>
-    </div>
-  </div>
-</nav>
-
-
+    /* HEADER */
     header {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
         url("header.png");
       background-size: cover;
-      background-position: center;
+      background-position: center top;
+      min-height: 80vh;
       color: white;
-      padding: 120px 20px;
+      padding: 140px 20px;
       text-align: center;
     }
 
@@ -83,6 +74,7 @@
       margin: auto;
     }
 
+    /* SEKSJONER */
     section {
       max-width: 1000px;
       margin: auto;
@@ -94,6 +86,7 @@
       margin-bottom: 20px;
     }
 
+    /* KORT / BOKSER */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -101,26 +94,26 @@
     }
 
     .card {
-      background: white;
-      border-radius: 8px;
-      padding: 25px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      background: #f1f4ee;
+      border-radius: 12px;
+      padding: 28px;
+      border: 1px solid #e0e6dc;
       text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      color: #2f4033;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+      background: #e6ede4;
+      transform: translateY(-2px);
     }
 
-    .prices {
-      background: #eef2ec;
-      border-radius: 8px;
-      padding: 30px;
+    .card h3 {
+      margin-top: 0;
+      color: #3f5a45;
     }
 
+    /* FOOTER */
     footer {
       background: #2f4033;
       color: white;
@@ -129,12 +122,24 @@
     }
 
     footer p {
-      margin: 5px 0;
+      margin: 6px 0;
     }
   </style>
 </head>
 
 <body>
+
+<nav class="top-menu">
+  <div class="menu-inner">
+    <a href="index.html" class="logo">Marhaugengård</a>
+    <div class="menu-links">
+      <a href="index.html">Hjem</a>
+      <a href="#produkter">Produkter</a>
+      <a href="#verdier">Verdier</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </div>
+</nav>
 
 <header>
   <h1>Marhaugengård</h1>
@@ -151,12 +156,10 @@
 
 <section id="produkter">
   <h2>Våre produkter</h2>
-
   <div class="cards">
-
     <a href="egg.html" class="card">
       <h3>🥚 Egg</h3>
-      <p>Egg fra økologiske frittgående høner med fokus på god dyrevelferd.</p>
+      <p>Økologiske egg fra frittgående høner.</p>
     </a>
 
     <a href="ved.html" class="card">
@@ -175,38 +178,40 @@
     </a>
 
     <a href="utleie.html" class="card">
-      <h3>🛠 Utstyr / verktøy til utleie</h3>
-      <p>Utleie av utstyr til gård, skog og utearbeid.</p>
+      <h3>🛠 Utstyr / verktøy</h3>
+      <p>Utleie av utstyr til gård og utearbeid.</p>
     </a>
-
   </div>
 </section>
 
-<sectionid="verdier">
+<section id="verdier">
   <h2>Våre verdier</h2>
-
   <div class="cards">
-
     <a href="okologisk.html" class="card">
       <h3>🌱 Økologisk drift</h3>
-      <p>Landbruk i takt med naturens egne kretsløp.</p>
+      <p>Landbruk i takt med naturens kretsløp.</p>
     </a>
 
     <a href="dyrevelferd.html" class="card">
       <h3>🐓 Dyrevelferd</h3>
-      <p>God plass, ro og naturlige omgivelser for dyrene.</p>
+      <p>Respekt og gode leveforhold for dyrene.</p>
     </a>
 
     <a href="langsiktighet.html" class="card">
       <h3>🌍 Langsiktighet</h3>
-      <p>Forvaltning av jord og ressurser for framtiden.</p>
+      <p>Forvaltning med tanke på framtiden.</p>
     </a>
-
   </div>
 </section>
-
 
 <footer id="kontakt">
   <p><strong>MarhaugenGård ANS</strong></p>
   <p>Bardalsveien 259, 8897 Bardal</p>
-  <p>Tlf: Tommy 977 29 948 ·
+  <p>Tlf: Tommy 977 29 948 · Ellen 908 07 514</p>
+  <p>✉️ tommypettersen_9@hotmail.com</p>
+  <p>Org.nr: 933 100 367 MVA</p>
+</footer>
+
+</body>
+</html>
+
