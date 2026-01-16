@@ -13,34 +13,6 @@
       color: #333;
       line-height: 1.7;
     }
-    form label {
-  font-weight: bold;
-  color: #4a6b4f;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  max-width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-form button {
-  background: #4a6b4f;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-form button:hover {
-  background: #3f5a45;
-}
 
     /* TOPPMENY */
     .top-menu {
@@ -114,7 +86,7 @@ form button:hover {
       margin-bottom: 20px;
     }
 
-    /* KORT / BOKSER */
+    /* KORT */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -140,42 +112,35 @@ form button:hover {
       margin-top: 0;
       color: #3f5a45;
     }
-    <section id="kontakt-skjema" style="max-width: 800px; margin: auto; padding: 40px 20px;">
-  <h2>Kontakt oss</h2>
 
-  <form action="mailto:tommypettersen_9@hotmail.com" method="post" enctype="text/plain">
+    /* KONTAKTSKJEMA */
+    form label {
+      font-weight: bold;
+      color: #4a6b4f;
+    }
 
-    <p>
-      <label>Navn *</label><br>
-      <input type="text" name="Navn" required>
-    </p>
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
 
-    <p>
-      <label>Telefon *</label><br>
-      <input type="tel" name="Telefon" required>
-    </p>
+    form button {
+      background: #4a6b4f;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
 
-    <p>
-      <label>E-post *</label><br>
-      <input type="email" name="E-post" required>
-    </p>
-
-    <p>
-      <label>Emne *</label><br>
-      <input type="text" name="Emne" required>
-    </p>
-
-    <p>
-      <label>Melding *</label><br>
-      <textarea name="Melding" rows="6" required></textarea>
-    </p>
-
-    <p>
-      <button type="submit">Send melding</button>
-    </p>
-
-  </form>
-</section>
+    form button:hover {
+      background: #3f5a45;
+    }
 
     /* FOOTER */
     footer {
@@ -197,7 +162,7 @@ form button:hover {
   <div class="menu-inner">
     <a href="index.html" class="logo">Marhaugengård</a>
     <div class="menu-links">
-      <a href="index.html">Hjem</a>
+      <a href="#top">Hjem</a>
       <a href="#produkter">Produkter</a>
       <a href="#verdier">Verdier</a>
       <a href="#kontakt">Kontakt</a>
@@ -205,7 +170,7 @@ form button:hover {
   </div>
 </nav>
 
-<header>
+<header id="top">
   <h1>Marhaugengård</h1>
   <p>Økologisk drift med respekt for natur, dyr og mennesker</p>
 </header>
@@ -225,22 +190,18 @@ form button:hover {
       <h3>🥚 Egg</h3>
       <p>Økologiske egg fra frittgående høner.</p>
     </a>
-
     <a href="ved.html" class="card">
       <h3>🪵 Ved</h3>
       <p>Kortreist ved produsert med hensyn til skog og miljø.</p>
     </a>
-
     <a href="gronnsaker.html" class="card">
       <h3>🥕 Grønnsaker</h3>
       <p>Sesongbasert produksjon og foredlede produkter.</p>
     </a>
-
     <a href="bifolk.html" class="card">
       <h3>🐝 Bifolk / Villsau</h3>
-      <p>På vei – del av gårdens videre utvikling.</p>
+      <p>På vei – del av gårdens utvikling.</p>
     </a>
-
     <a href="utleie.html" class="card">
       <h3>🛠 Utstyr / verktøy</h3>
       <p>Utleie av utstyr til gård og utearbeid.</p>
@@ -255,12 +216,10 @@ form button:hover {
       <h3>🌱 Økologisk drift</h3>
       <p>Landbruk i takt med naturens kretsløp.</p>
     </a>
-
     <a href="dyrevelferd.html" class="card">
       <h3>🐓 Dyrevelferd</h3>
       <p>Respekt og gode leveforhold for dyrene.</p>
     </a>
-
     <a href="langsiktighet.html" class="card">
       <h3>🌍 Langsiktighet</h3>
       <p>Forvaltning med tanke på framtiden.</p>
@@ -268,7 +227,20 @@ form button:hover {
   </div>
 </section>
 
-<footer id="kontakt">
+<section id="kontakt">
+  <h2>Kontakt oss</h2>
+
+  <form action="mailto:tommypettersen_9@hotmail.com" method="post" enctype="text/plain">
+    <p><label>Navn *</label><br><input type="text" name="Navn" required></p>
+    <p><label>Telefon *</label><br><input type="tel" name="Telefon" required></p>
+    <p><label>E-post *</label><br><input type="email" name="Epost" required></p>
+    <p><label>Emne *</label><br><input type="text" name="Emne" required></p>
+    <p><label>Melding *</label><br><textarea name="Melding" rows="6" required></textarea></p>
+    <p><button type="submit">Send melding</button></p>
+  </form>
+</section>
+
+<footer>
   <p><strong>MarhaugenGård ANS</strong></p>
   <p>Bardalsveien 259, 8897 Bardal</p>
   <p>Tlf: Tommy 977 29 948 · Ellen 908 07 514</p>
