@@ -13,6 +13,54 @@
       color: #333;
       line-height: 1.7;
     }
+    .top-menu {
+  background: #f7f8f5;
+  border-bottom: 1px solid #e0e6dc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.menu-inner {
+  max-width: 1000px;
+  margin: auto;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  color: #4a6b4f;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.menu-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #4a5c4f;
+  font-size: 0.95rem;
+}
+
+.menu-links a:hover {
+  text-decoration: underline;
+}
+
+    <nav class="top-menu">
+  <div class="menu-inner">
+    <a href="index.html" class="logo">Marhaugengård</a>
+
+    <div class="menu-links">
+      <a href="index.html">Hjem</a>
+      <a href="#produkter">Produkter</a>
+      <a href="#verdier">Verdier</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </div>
+</nav>
+
 
     header {
       background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
@@ -101,7 +149,7 @@
   </p>
 </section>
 
-<section>
+<section id="produkter">
   <h2>Våre produkter</h2>
 
   <div class="cards">
@@ -134,7 +182,7 @@
   </div>
 </section>
 
-<section>
+<sectionid="verdier">
   <h2>Våre verdier</h2>
 
   <div class="cards">
@@ -158,7 +206,7 @@
 </section>
 
 
-<footer>
+<footer id="kontakt">
   <p><strong>MarhaugenGård ANS</strong></p>
   <p>Bardalsveien 259, 8897 Bardal</p>
   <p>Tlf: Tommy 977 29 948 ·
