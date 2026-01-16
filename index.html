@@ -13,6 +13,34 @@
       color: #333;
       line-height: 1.7;
     }
+    form label {
+  font-weight: bold;
+  color: #4a6b4f;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+form button {
+  background: #4a6b4f;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #3f5a45;
+}
 
     /* TOPPMENY */
     .top-menu {
@@ -112,6 +140,42 @@
       margin-top: 0;
       color: #3f5a45;
     }
+    <section id="kontakt-skjema" style="max-width: 800px; margin: auto; padding: 40px 20px;">
+  <h2>Kontakt oss</h2>
+
+  <form action="mailto:tommypettersen_9@hotmail.com" method="post" enctype="text/plain">
+
+    <p>
+      <label>Navn *</label><br>
+      <input type="text" name="Navn" required>
+    </p>
+
+    <p>
+      <label>Telefon *</label><br>
+      <input type="tel" name="Telefon" required>
+    </p>
+
+    <p>
+      <label>E-post *</label><br>
+      <input type="email" name="E-post" required>
+    </p>
+
+    <p>
+      <label>Emne *</label><br>
+      <input type="text" name="Emne" required>
+    </p>
+
+    <p>
+      <label>Melding *</label><br>
+      <textarea name="Melding" rows="6" required></textarea>
+    </p>
+
+    <p>
+      <button type="submit">Send melding</button>
+    </p>
+
+  </form>
+</section>
 
     /* FOOTER */
     footer {
