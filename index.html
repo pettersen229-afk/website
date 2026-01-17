@@ -113,34 +113,54 @@
       color: #3f5a45;
     }
 
-    /* KONTAKTSKJEMA */
-    form label {
-      font-weight: bold;
-      color: #4a6b4f;
-    }
+    /* KONTAKTSKJEMA – forbedret */
+.kontakt-boks {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #eef2ec;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e0e6dc;
+}
 
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
+.kontakt-boks label {
+  font-weight: bold;
+  color: #4a6b4f;
+  font-size: 0.9rem;
+}
 
-    form button {
-      background: #4a6b4f;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
+.kontakt-boks input,
+.kontakt-boks textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #cfd6cc;
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
 
-    form button:hover {
-      background: #3f5a45;
-    }
+.kontakt-boks textarea {
+  resize: vertical;
+}
+
+.kontakt-boks p {
+  margin-bottom: 18px;
+}
+
+.kontakt-boks button {
+  background: #4a6b4f;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.kontakt-boks button:hover {
+  background: #3f5a45;
+}
+
 
     /* FOOTER */
     footer {
@@ -230,6 +250,8 @@
 <section id="kontakt">
   <h2>Kontakt oss</h2>
 
+<div class="kontakt-boks">
+  
   <form action="mailto:tommypettersen_9@hotmail.com" method="post" enctype="text/plain">
     <p><label>Navn *</label><br><input type="text" name="Navn" required></p>
     <p><label>Telefon *</label><br><input type="tel" name="Telefon" required></p>
@@ -237,7 +259,8 @@
     <p><label>Emne *</label><br><input type="text" name="Emne" required></p>
     <p><label>Melding *</label><br><textarea name="Melding" rows="6" required></textarea></p>
     <p><button type="submit">Send melding</button></p>
-  </form>
+    </form>
+</div>
 </section>
 
 <footer>
