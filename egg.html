@@ -14,19 +14,31 @@
       line-height: 1.7;
     }
 
-header {
-  background:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
-    url("header.png");
-  background-size: cover;
-  background-position: center top;
-  min-height: 50vh;
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-}
+    /* HEADER */
+    header {
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+        url("header.png");
+      background-size: cover;
+      background-position: center top;
+      min-height: 50vh;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
 
+    header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+    }
 
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* INNHOLD */
     section {
       max-width: 900px;
       margin: auto;
@@ -35,16 +47,33 @@ header {
 
     h2 {
       color: #4a6b4f;
+      margin-bottom: 20px;
     }
 
-    .produktbilde {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    margin: 30px 0;
-    display: block;
-  }
+    /* BILDER */
+    .bilde-rad {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin: 30px 0;
+    }
 
+    .bilde-rad img {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 768px) {
+      .bilde-rad {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* PRISBOKS */
     .price-box {
       background: #eef2ec;
       border-radius: 8px;
@@ -56,10 +85,15 @@ header {
       margin: 10px 0;
     }
 
+    /* LENKE */
     a {
       color: #4a6b4f;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -73,27 +107,27 @@ header {
 
 <section>
   <h2>Om eggene våre</h2>
-  <img src="høner1.png" alt="Frittgående høner på Marhaugengård" class="produktbilde">
-  <img src="høne2.jpeg" alt="Frittgående høner på Marhaugengård" class="produktbilde">
+
   <div class="bilde-rad">
-  <img src="høner1.png" alt="Marhaugengård">
-  <img src="høne2.jpeg" alt="Frittgående høner på Marhaugengård">
-</div>
+    <img src="høner1.png" alt="Frittgående høner på Marhaugengård">
+    <img src="høne2.jpeg" alt="Økologiske høner på gården">
+  </div>
 
   <p>
-    Våre egg kommer fra Økologiske frittgående høner som har god plass, rolige omgivelser
-    og tilgang til uteområde. Vi legger stor vekt på dyrevelferd, naturlig fôr
-    og god hygiene.
+    Våre egg kommer fra økologiske, frittgående høner som har god plass,
+    rolige omgivelser og tilgang til uteområde. Vi legger stor vekt på
+    dyrevelferd, naturlig fôr og god hygiene.
   </p>
 
   <p>
-    Eggene selges direkte fra gården, og tilgjengeligheten kan variere gjennom året.
+    Eggene selges direkte fra gården, og tilgjengeligheten kan variere
+    gjennom året.
   </p>
 
   <div class="price-box">
     <h2>Priser</h2>
     <p><strong>1 brett (30 egg):</strong> 125 kr</p>
-    <p><em>Ta kontakt for bestillinger.</em></p>
+    <p><em>Ta kontakt for bestilling.</em></p>
   </div>
 
   <p style="margin-top: 40px;">
@@ -103,3 +137,4 @@ header {
 
 </body>
 </html>
+
