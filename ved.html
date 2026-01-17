@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Ved – Marhaugengård</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f8f5;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    /* HEADER */
+    header {
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+        url("header.png");
+      background-size: cover;
+      background-position: center top;
+      min-height: 50vh;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* INNHOLD */
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      color: #4a6b4f;
+      margin-bottom: 20px;
+    }
+
+    /* BILDER */
+    .bilde-rad {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .bilde-rad img {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 768px) {
+      .bilde-rad {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* PRISLISTE */
+    .price-box {
+      background: #eef2ec;
+      border-radius: 8px;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    .price-box table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .price-box th,
+    .price-box td {
+      text-align: left;
+      padding: 10px;
+      border-bottom: 1px solid #d6ddd1;
+    }
+
+    .price-box th {
+      color: #4a6b4f;
+      font-weight: bold;
+    }
+
+    /* LENKER */
+    a {
+      color: #4a6b4f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🪵 Ved fra Marhaugengård</h1>
+  <p>Kortreist ved produsert med hensyn til skog og miljø</p>
+</header>
+
+<section>
+  <h2>Om veden vår</h2>
+
+  <div class="bilde-rad">
+    <!-- Bytt filnavnene når bildene er lastet opp -->
+    <img src="ved1.jpg" alt="Ved fra Marhaugengård">
+    <img src="ved2.jpg" alt="Ved klar for levering">
+  </div>
+
+  <p>
+    Veden produseres lokalt på gården med fokus på bærekraftig uttak,
+    god tørketid og jevn kvalitet. Vi tilbyr ved tilpasset både
+    vedovn, peis og utebruk.
+  </p>
+
+  <div class="price-box">
+    <h2>Prisliste</h2>
+
+    <table>
+      <tr>
+        <th>Produkt</th>
+        <th>Pris</th>
+      </tr>
+      <tr>
+        <td>Sekk ved (40 liter)</td>
+        <td>___ kr</td>
+      </tr>
+      <tr>
+        <td>Storsekk</td>
+        <td>___ kr</td>
+      </tr>
+      <tr>
+        <td>Favneved</td>
+        <td>___ kr</td>
+      </tr>
+    </table>
+
+    <p style="margin-top: 15px;">
+      <em>Ta kontakt for bestilling og levering.</em>
+    </p>
+  </div>
+
+  <p style="margin-top: 40px;">
+    <a href="index.html">← Tilbake til forsiden</a>
+  </p>
+</section>
+
+</body>
+</html>
