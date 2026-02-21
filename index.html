@@ -36,7 +36,6 @@ body {
   font-weight: bold;
   color: #4a6b4f;
   text-decoration: none;
-  font-size: 1.1rem;
 }
 
 .menu-links a {
@@ -64,7 +63,6 @@ header {
 
 header h1 {
   font-size: 3rem;
-  margin-bottom: 10px;
 }
 
 /* SEKSJON */
@@ -108,27 +106,49 @@ h2 {
   color: #3f5a45;
 }
 
-/* NETTBUTIKK BOX */
-.shop-box {
-  text-align: center;
+/* KONTAKT */
+.kontakt-boks {
+  max-width: 600px;
+  margin: auto;
   background: #eef2ec;
-  padding: 40px;
+  padding: 30px;
   border-radius: 16px;
   border: 1px solid #d8dfd5;
 }
 
-.shop-box button {
-  margin-top: 15px;
-  padding: 12px 24px;
+.kontakt-boks input,
+.kontakt-boks textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #cfd6cc;
+  margin-top: 6px;
+}
+
+.kontakt-boks button {
+  margin-top: 10px;
+  padding: 10px 20px;
   border: none;
   background: #4a6b4f;
   color: white;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
-.shop-box button:hover {
+.kontakt-boks button:hover {
   background: #3f5a45;
+}
+
+.kart-lenke {
+  display: inline-block;
+  margin-top: 20px;
+  color: #4a6b4f;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.kart-lenke:hover {
+  text-decoration: underline;
 }
 
 /* FOOTER */
@@ -156,6 +176,7 @@ footer {
     <div class="menu-links">
       <a href="#produkter">Produkter</a>
       <a href="#tjenester">Tjenester</a>
+      <a href="#verdier">Verdier</a>
       <a href="#butikk">Nettbutikk</a>
       <a href="#kontakt">Kontakt</a>
     </div>
@@ -171,25 +192,10 @@ footer {
 <section id="produkter">
   <h2>Våre produkter</h2>
   <div class="cards">
-    <a href="egg.html" class="card">
-      <h3>🥚 Egg</h3>
-      <p>Økologiske egg fra frittgående høner.</p>
-    </a>
-
-    <a href="ved.html" class="card">
-      <h3>🪵 Ved</h3>
-      <p>Kortreist ved produsert med hensyn til miljø.</p>
-    </a>
-
-    <a href="gronnsaker.html" class="card">
-      <h3>🥕 Grønnsaker</h3>
-      <p>Sesongbasert produksjon og foredling.</p>
-    </a>
-
-    <a href="bifolk.html" class="card">
-      <h3>🐝 Bifolk</h3>
-      <p>Salg og utvikling av bifolk.</p>
-    </a>
+    <a href="egg.html" class="card"><h3>🥚 Egg</h3><p>Økologiske egg.</p></a>
+    <a href="ved.html" class="card"><h3>🪵 Ved</h3><p>Kortreist ved.</p></a>
+    <a href="gronnsaker.html" class="card"><h3>🥕 Grønnsaker</h3><p>Sesongbasert produksjon.</p></a>
+    <a href="bifolk.html" class="card"><h3>🐝 Bifolk</h3><p>Salg og utvikling av bifolk.</p></a>
   </div>
 </section>
 
@@ -197,48 +203,55 @@ footer {
 <section id="tjenester">
   <h2>Våre tjenester</h2>
   <div class="cards">
-    <a href="utleie.html" class="card">
-      <h3>🚜 Utleie</h3>
-      <p>Utleie av maskiner og utstyr.</p>
-    </a>
+    <a href="utleie.html" class="card"><h3>🚜 Utleie</h3><p>Utleie av maskiner.</p></a>
+    <a href="#" class="card"><h3>📋 Rådgivning</h3><p>Veiledning innen gårdsdrift.</p></a>
+    <a href="#" class="card"><h3>🌲 Andre tjenester</h3><p>Stubbefresing m.m.</p></a>
+  </div>
+</section>
 
-    <a href="#" class="card">
-      <h3>📋 Rådgivning</h3>
-      <p>Veiledning innen småskala gårdsdrift.</p>
-    </a>
-
-    <a href="#" class="card">
-      <h3>🌲 Andre tjenester</h3>
-      <p>Stubbefresing og øvrige oppdrag.</p>
-    </a>
+<!-- VERDIER -->
+<section id="verdier">
+  <h2>Våre verdier</h2>
+  <div class="cards">
+    <a href="okologisk.html" class="card"><h3>🌱 Økologisk drift</h3></a>
+    <a href="dyrevelferd.html" class="card"><h3>🐓 Dyrevelferd</h3></a>
+    <a href="langsiktighet.html" class="card"><h3>🌍 Langsiktighet</h3></a>
   </div>
 </section>
 
 <!-- NETTBUTIKK -->
 <section id="butikk">
   <h2>Nettbutikk</h2>
-  <div class="shop-box">
-    <p>
-      Nettbutikk er under utvikling. Her vil du snart kunne bestille
-      produkter direkte fra gården.
-    </p>
-    <button>Kommer snart</button>
+  <div class="kontakt-boks" style="text-align:center;">
+    <p>Nettbutikk kommer snart. Her vil du kunne bestille produkter direkte.</p>
   </div>
 </section>
 
 <!-- KONTAKT -->
 <section id="kontakt">
   <h2>Kontakt oss</h2>
-  <div class="shop-box">
-    <p>Ta kontakt for bestilling eller forespørsel.</p>
-    <p><strong>📞 977 29 948</strong></p>
-    <p>✉️ tommypettersen_9@hotmail.com</p>
+  <div class="kontakt-boks">
+    <form action="mailto:tommypettersen_9@hotmail.com" method="post" enctype="text/plain">
+      <p>Navn<br><input type="text" required></p>
+      <p>E-post<br><input type="email" required></p>
+      <p>Melding<br><textarea rows="6" required></textarea></p>
+      <button type="submit">Send melding</button>
+    </form>
+
+    <div style="text-align:center;">
+      <a href="https://www.google.com/maps/search/?api=1&query=Bardalsveien+259+8897+Bardal"
+         target="_blank"
+         class="kart-lenke">
+         📍 Finn oss på Google Maps
+      </a>
+    </div>
   </div>
 </section>
 
 <footer>
   <p><strong>MarhaugenGård ANS</strong></p>
   <p>Bardalsveien 259, 8897 Bardal</p>
+  <p>Tlf: 977 29 948</p>
   <p>Org.nr: 933 100 367 MVA</p>
 </footer>
 
