@@ -1,143 +1,132 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <title>Marhaugengård – Økologisk gårdsdrift</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Marhaugengård – Økologisk gårdsdrift</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f7f8f5;
-      color: #333;
-      line-height: 1.7;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f8f5;
+  color: #333;
+  line-height: 1.7;
+}
 
-    /* TOPPMENY */
-    .top-menu {
-      background: #f7f8f5;
-      border-bottom: 1px solid #e0e6dc;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+/* TOPPMENY */
+.top-menu {
+  background: #f7f8f5;
+  border-bottom: 1px solid #e0e6dc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    .menu-inner {
-      max-width: 1000px;
-      margin: auto;
-      padding: 12px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-weight: bold;
-      color: #4a6b4f;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-    .bilde-rad {
+.menu-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 12px 20px;
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap; /* gjør at de legger seg under hverandre på mobil */
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.bilde-rad img {
-  width: 100%;
-  max-width: 420px; /* styrer størrelsen på PC */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-    .menu-links a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #4a5c4f;
-      font-size: 0.95rem;
-    }
-
-    .menu-links a:hover {
-      text-decoration: underline;
-    }
-    .kart-lenke {
-  color: #4a6b4f;
+.logo {
   font-weight: bold;
+  color: #4a6b4f;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
-.kart-lenke:hover {
+.menu-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #4a5c4f;
+  font-size: 0.95rem;
+}
+
+.menu-links a:hover {
   text-decoration: underline;
 }
 
-    
-    /* HEADER */
-    header {
-      background:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
-        url("header.png");
-      background-size: cover;
-      background-position: center top;
-      min-height: 80vh;
-      color: white;
-      padding: 140px 20px;
-      text-align: center;
-    }
+/* HEADER */
+header {
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+    url("header.png");
+  background-size: cover;
+  background-position: center top;
+  min-height: 75vh;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+}
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
 
-    header p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: auto;
-    }
+header p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
+}
 
-    /* SEKSJONER */
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+/* SEKSJON */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
 
-    h2 {
-      color: #4a6b4f;
-      margin-bottom: 20px;
-    }
+h2 {
+  color: #4a6b4f;
+  margin-bottom: 30px;
+  text-align: center;
+}
 
-    /* KORT */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+/* PRODUKT + TJENESTE GRID */
+.grid-wrapper {
+  display: grid;
+  gap: 50px;
+}
 
-    .card {
-      background: #f1f4ee;
-      border-radius: 12px;
-      padding: 28px;
-      border: 1px solid #e0e6dc;
-      text-decoration: none;
-      color: #2f4033;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
+.grid-title {
+  text-align: left;
+  color: #3f5a45;
+  margin-bottom: 15px;
+}
 
-    .card:hover {
-      background: #e6ede4;
-      transform: translateY(-2px);
-    }
+/* KORT */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
 
-    .card h3 {
-      margin-top: 0;
-      color: #3f5a45;
-    }
+.card {
+  background: #f1f4ee;
+  border-radius: 14px;
+  padding: 28px;
+  border: 1px solid #e0e6dc;
+  text-decoration: none;
+  color: #2f4033;
+  transition: all 0.2s ease;
+}
 
-    /* KONTAKTSKJEMA – forbedret */
+.card:hover {
+  background: #e6ede4;
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #3f5a45;
+}
+
+/* KONTAKT */
 .kontakt-boks {
   max-width: 600px;
   margin: 0 auto;
@@ -167,10 +156,6 @@
   resize: vertical;
 }
 
-.kontakt-boks p {
-  margin-bottom: 18px;
-}
-
 .kontakt-boks button {
   background: #4a6b4f;
   color: white;
@@ -185,19 +170,25 @@
   background: #3f5a45;
 }
 
+/* FOOTER */
+footer {
+  background: #2f4033;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
 
-    /* FOOTER */
-    footer {
-      background: #2f4033;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
+footer p {
+  margin: 6px 0;
+}
 
-    footer p {
-      margin: 6px 0;
-    }
-  </style>
+/* MOBIL */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -223,33 +214,50 @@
   <h2>Om Marhaugengård</h2>
   <p>
     Marhaugengård er en småskala bondegård med fokus på økologisk drift og bærekraftige løsninger.
-    Vi produserer mat og råvarer med omtanke for naturen, dyrene og framtidige generasjoner.
   </p>
 </section>
 
 <section id="produkter">
-  <h2>Våre produkter</h2>
-  <div class="cards">
-    <a href="egg.html" class="card">
-      <h3>🥚 Egg</h3>
-      <p>Økologiske egg fra frittgående høner.</p>
-    </a>
-    <a href="ved.html" class="card">
-      <h3>🪵 Ved</h3>
-      <p>Kortreist ved produsert med hensyn til skog og miljø.</p>
-    </a>
-    <a href="gronnsaker.html" class="card">
-      <h3>🥕 Grønnsaker</h3>
-      <p>Sesongbasert produksjon og foredlede produkter.</p>
-    </a>
-    <a href="bifolk.html" class="card">
-      <h3>🐝 Bifolk / Villsau</h3>
-      <p>På vei – del av gårdens utvikling.</p>
-    </a>
-    <a href="utleie.html" class="card">
-      <h3>🛠 Utstyr / verktøy</h3>
-      <p>Utleie av utstyr til gård og utearbeid.</p>
-    </a>
+  <h2>Våre produkter & tjenester</h2>
+
+  <div class="grid-wrapper">
+
+    <div>
+      <h3 class="grid-title">Produkter</h3>
+      <div class="cards">
+        <a href="egg.html" class="card">
+          <h3>🥚 Egg</h3>
+          <p>Økologiske egg fra frittgående høner.</p>
+        </a>
+        <a href="ved.html" class="card">
+          <h3>🪵 Ved</h3>
+          <p>Kortreist ved produsert med hensyn til miljø.</p>
+        </a>
+        <a href="gronnsaker.html" class="card">
+          <h3>🥕 Grønnsaker</h3>
+          <p>Sesongbasert produksjon.</p>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="grid-title">Tjenester</h3>
+      <div class="cards">
+        <a href="utleie.html" class="card">
+          <h3>🛠 Utleie</h3>
+          <p>Utleie av utstyr til gård og utearbeid.</p>
+        </a>
+        <a href="#" class="card">
+          <h3>🐝 Bifolk</h3>
+          <p>Salg og veiledning innen birøkt.</p>
+        </a>
+        <a href="#" class="card">
+          <h3>🚜 Rådgivning</h3>
+          <p>Veiledning innen småskala gårdsdrift.</p>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -262,7 +270,7 @@
     </a>
     <a href="dyrevelferd.html" class="card">
       <h3>🐓 Dyrevelferd</h3>
-      <p>Respekt og gode leveforhold for dyrene.</p>
+      <p>Respekt og gode leveforhold.</p>
     </a>
     <a href="langsiktighet.html" class="card">
       <h3>🌍 Langsiktighet</h3>
@@ -274,25 +282,15 @@
 <section id="kontakt">
   <h2>Kontakt oss</h2>
 
-<div class="kontakt-boks">
-  
-  <form action="mailto:tommypettersen_9@hotmail.com" method="post" enctype="text/plain">
-    <p><label>Navn *</label><br><input type="text" name="Navn" required></p>
-    <p><label>Telefon *</label><br><input type="tel" name="Telefon" required></p>
-    <p><label>E-post *</label><br><input type="email" name="Epost" required></p>
-    <p><label>Emne *</label><br><input type="text" name="Emne" required></p>
-    <p><label>Melding *</label><br><textarea name="Melding" rows="6" required></textarea></p>
-    <p><button type="submit">Send melding</button></p>
+  <div class="kontakt-boks">
+    <form action="mailto:tommypettersen_9@hotmail.com" method="post" enctype="text/plain">
+      <p><label>Navn *</label><br><input type="text" required></p>
+      <p><label>Telefon *</label><br><input type="tel" required></p>
+      <p><label>E-post *</label><br><input type="email" required></p>
+      <p><label>Melding *</label><br><textarea rows="6" required></textarea></p>
+      <p><button type="submit">Send melding</button></p>
     </form>
-</div>
-  <p style="margin-top: 30px; text-align: center;">
-  <a href="https://www.google.com/maps/search/?api=1&query=Bardalsveien+259+8897+Bardal"
-     target="_blank"
-     rel="noopener"
-     class="kart-lenke">
-    📍 Finn oss på Google Maps
-  </a>
-</p>
+  </div>
 
 </section>
 
@@ -306,4 +304,3 @@
 
 </body>
 </html>
-
