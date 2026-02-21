@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Marhaugengård – Økologisk gårdsdrift</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Marhaugengård i Bardal tilbyr økologiske egg, ved, grønnsaker, bifolk, utleie og tjenester. Følg oss på Facebook og ta kontakt for bestilling.">
 
 <style>
 body {
@@ -106,6 +107,11 @@ h2 {
   color: #3f5a45;
 }
 
+/* FACEBOOK */
+#facebook {
+  text-align: center;
+}
+
 /* KONTAKT */
 .kontakt-boks {
   max-width: 600px;
@@ -170,6 +176,12 @@ footer {
 
 <body>
 
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/nb_NO/sdk.js#xfbml=1&version=v18.0">
+</script>
+
 <nav class="top-menu">
   <div class="menu-inner">
     <a href="index.html" class="logo">Marhaugengård</a>
@@ -178,6 +190,7 @@ footer {
       <a href="#tjenester">Tjenester</a>
       <a href="#verdier">Verdier</a>
       <a href="#butikk">Nettbutikk</a>
+      <a href="#facebook">Facebook</a>
       <a href="#kontakt">Kontakt</a>
     </div>
   </div>
@@ -188,7 +201,6 @@ footer {
   <p>Økologisk drift med respekt for natur, dyr og mennesker</p>
 </header>
 
-<!-- PRODUKTER -->
 <section id="produkter">
   <h2>Våre produkter</h2>
   <div class="cards">
@@ -199,7 +211,6 @@ footer {
   </div>
 </section>
 
-<!-- TJENESTER -->
 <section id="tjenester">
   <h2>Våre tjenester</h2>
   <div class="cards">
@@ -209,7 +220,6 @@ footer {
   </div>
 </section>
 
-<!-- VERDIER -->
 <section id="verdier">
   <h2>Våre verdier</h2>
   <div class="cards">
@@ -219,7 +229,6 @@ footer {
   </div>
 </section>
 
-<!-- NETTBUTIKK -->
 <section id="butikk">
   <h2>Nettbutikk</h2>
   <div class="kontakt-boks" style="text-align:center;">
@@ -227,7 +236,19 @@ footer {
   </div>
 </section>
 
-<!-- KONTAKT -->
+<section id="facebook">
+  <h2>Følg oss på Facebook</h2>
+  <div style="display:flex; justify-content:center;">
+    <div class="fb-page"
+         data-href="https://www.facebook.com/profile.php?id=61583430581251"
+         data-tabs="timeline"
+         data-adapt-container-width="true"
+         data-hide-cover="false"
+         data-show-facepile="true">
+    </div>
+  </div>
+</section>
+
 <section id="kontakt">
   <h2>Kontakt oss</h2>
   <div class="kontakt-boks">
