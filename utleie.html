@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Utleie – Marhaugengård</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Utleie av maskiner og utstyr i Bardal. Marhaugengård tilbyr praktisk og fleksibel utleie for gård og uteprosjekter.">
+<meta name="description" content="Utleie av maskiner og utstyr i Bardal. Marhaugengård tilbyr praktisk og fleksibel utleie.">
 
 <style>
 body {
@@ -14,7 +14,6 @@ body {
   color: #333;
 }
 
-/* Enkel toppmeny */
 .top-menu {
   background: #f7f8f5;
   border-bottom: 1px solid #e0e6dc;
@@ -27,7 +26,6 @@ body {
   font-weight: bold;
 }
 
-/* Header */
 header {
   background: #4a6b4f;
   color: white;
@@ -35,33 +33,29 @@ header {
   text-align: center;
 }
 
-/* Seksjon */
 section {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   padding: 60px 20px;
 }
 
-/* Grid */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-/* Kort */
 .card {
   background: #eef2ec;
-  padding: 25px;
+  padding: 30px;
   border-radius: 16px;
+  margin-bottom: 40px;
 }
 
-.card img {
+/* Bildegalleri */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.image-grid img {
   width: 100%;
-  max-width:350px;
-  height: auto;
-  display: block;
-  margin: 0 auto 15px auto;
   border-radius: 12px;
 }
 </style>
@@ -80,51 +74,69 @@ section {
 
 <section>
 
-  <div class="cards">
+  <!-- RENSEMASKIN -->
+  <div class="card">
 
-    <div class="card">
-  <img src="rensemaskin1.jpg" alt="Rensemaskin til utleie">
-  <h3><div class="card">
-  <img src="rensemaskin.jpg" alt="Rensemaskin til utleie">
-  <h3>Rensemaskin til utleie</h3>
-  <p>
-    Kraftig rensemaskin for tepper, møbler og bilinteriør.
-    Enkel i bruk og gir profesjonelt resultat.
-  </p>
-  <p>
-    <strong>Pris:</strong> 400 kr per døgn<br>
-    <strong>Depositum:</strong> 500 kr
-  </p>
-  <p>
-    Ta kontakt for reservasjon.
-  </p>
-</div>
-
-    <div class="card">
-      <img src="maskin1.jpg" alt="Maskin til utleie">
-      <h3>Maskin / Utstyr 1</h3>
-      <p>
-        Kort beskrivelse av maskinen. Hva den brukes til,
-        kapasitet og eventuell dagspris.
-      </p>
+    <div class="image-grid">
+      <img src="rense1.jpg" alt="Rensemaskin bilde 1">
+      <img src="rense2.jpg" alt="Rensemaskin bilde 2">
+      <img src="rense3.jpg" alt="Rensemaskin bilde 3">
+      <img src="rense4.jpg" alt="Rensemaskin bilde 4">
     </div>
 
-    <div class="card">
-      <img src="maskin2.jpg" alt="Utstyr til utleie">
-      <h3>Maskin / Utstyr 2</h3>
-      <p>
-        Kort forklaring av bruksområde og tilgjengelighet.
-        Ta kontakt for pris og reservasjon.
-      </p>
+    <h3>Rensemaskin til utleie</h3>
+
+    <p>
+      Kraftig rensemaskin for tepper, møbler og bilinteriør.
+      Enkel i bruk og gir profesjonelt resultat.
+    </p>
+
+    <p>
+      <strong>Pris:</strong> 400 kr per døgn<br>
+      <strong>Depositum:</strong> 500 kr
+    </p>
+
+    <p>
+      Ta kontakt for reservasjon.
+    </p>
+
+  </div>
+
+
+  <!-- MASKIN 2 -->
+  <div class="card">
+
+    <div class="image-grid">
+      <img src="maskin1_1.jpg">
+      <img src="maskin1_2.jpg">
+      <img src="maskin1_3.jpg">
+      <img src="maskin1_4.jpg">
     </div>
 
-    <div class="card">
-      <img src="maskin3.jpg" alt="Utleie utstyr">
-      <h3>Maskin / Utstyr 3</h3>
-      <p>
-        Beskrivelse av utstyret og hvilke oppgaver det passer til.
-      </p>
+    <h3>Maskin / Utstyr 2</h3>
+
+    <p>
+      Kort beskrivelse av maskinen og bruksområde.
+    </p>
+
+  </div>
+
+
+  <!-- MASKIN 3 -->
+  <div class="card">
+
+    <div class="image-grid">
+      <img src="maskin2_1.jpg">
+      <img src="maskin2_2.jpg">
+      <img src="maskin2_3.jpg">
+      <img src="maskin2_4.jpg">
     </div>
+
+    <h3>Maskin / Utstyr 3</h3>
+
+    <p>
+      Beskrivelse av utstyret og tilgjengelighet.
+    </p>
 
   </div>
 
