@@ -1,76 +1,179 @@
-<section>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Utleie – Marhaugengård</title>
 
-  <!-- RENSEMASKIN -->
-  <div class="card">
-    <div class="image-grid">
-      <img src="rense1.jpg" alt="Rensemaskin bilde 1">
-      <img src="rense2.jpg" alt="Rensemaskin bilde 2">
+<style>
+:root{
+  --green:#4a6b4f;
+  --green-dark:#2f4033;
+  --bg:#f7f8f5;
+}
+
+body{
+  margin:0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background:var(--bg);
+  color:#333;
+}
+
+/* HEADER */
+.header{
+  background:var(--green);
+  color:white;
+  text-align:center;
+  padding:60px 20px;
+}
+
+.header h1{
+  margin:0;
+  font-size:2.4rem;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+/* GRID */
+.utleie-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;
+}
+
+/* CARD */
+.card{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  transition:0.35s ease;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 45px rgba(0,0,0,0.12);
+}
+
+/* IMAGE GALLERY */
+.gallery{
+  display:flex;
+  overflow:hidden;
+}
+
+.gallery img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  transition:0.5s ease;
+}
+
+.card:hover img{
+  transform:scale(1.05);
+}
+
+/* CONTENT */
+.card-content{
+  padding:25px;
+}
+
+.card-content h2{
+  margin-top:0;
+  color:var(--green);
+}
+
+.price{
+  font-weight:bold;
+  font-size:1.1rem;
+  margin:15px 0;
+}
+
+.deposit{
+  font-size:0.95rem;
+  color:#666;
+}
+
+.button{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 20px;
+  background:var(--green);
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.button:hover{
+  background:var(--green-dark);
+}
+
+/* KOMMER SNART */
+.coming{
+  background:#eef2ec;
+  border:2px dashed #cfd8cc;
+  border-radius:18px;
+  padding:40px;
+  text-align:center;
+  color:#6b7c70;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .header h1{font-size:1.8rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Utleie</h1>
+  <p>Maskiner og utstyr tilgjengelig for gårdsarbeid og prosjekter</p>
+</div>
+
+<div class="container">
+  <div class="utleie-grid">
+
+    <!-- RENSEMASKIN -->
+    <div class="card">
+      <div class="gallery">
+        <img src="rensemaskin1.jpg" alt="Rensemaskin">
+      </div>
+      <div class="card-content">
+        <h2>Rensemaskin</h2>
+        <p>Kraftig rensemaskin for tepper, møbler og bilinteriør. Enkel i bruk og gir profesjonelt resultat.</p>
+        <div class="price">400 kr per døgn</div>
+        <div class="deposit">Depositum: 500 kr</div>
+        <a href="index.html#kontakt" class="button">Reserver</a>
+      </div>
     </div>
 
-    <h3>Rensemaskin til utleie</h3>
-    <p>
-      Kraftig rensemaskin for tepper, møbler og bilinteriør.
-      Enkel i bruk og gir profesjonelt resultat.
-    </p>
-
-    <p>
-      <strong>Pris:</strong> 400 kr per døgn<br>
-      <strong>Depositum:</strong> 500 kr
-    </p>
-
-    <p>Ta kontakt for reservasjon.</p>
-  </div>
-
-
-  <!-- JORDFRES -->
-  <div class="card">
-    <div class="image-grid">
-      <img src="jordfres1.jpg" alt="Jordfres bilde 1">
-      <img src="jordfres2.jpg" alt="Jordfres bilde 2">
+    <!-- JORDFRES -->
+    <div class="card">
+      <div class="gallery">
+        <img src="jordfres1.jpg" alt="Jordfres">
+      </div>
+      <div class="card-content">
+        <h2>Jordfres</h2>
+        <p>Effektiv jordfres for hage og mindre jordbruksarbeid. Enkel å håndtere og gir godt resultat.</p>
+        <div class="price">500 kr per døgn</div>
+        <a href="index.html#kontakt" class="button">Sjekk tilgjengelighet</a>
+      </div>
     </div>
 
-    <h3>Jordfres til utleie</h3>
-    <p>
-      Effektiv jordfres for hage og mindre jordbruksarbeid.
-      Enkel å håndtere og gir godt resultat.
-    </p>
+    <!-- KOMMER SNART -->
+    <div class="coming">
+      <h2>Kommer snart</h2>
+      <p>Nytt utstyr legges til fortløpende.</p>
+    </div>
 
-    <p>
-      <strong>Pris:</strong> 500 kr per døgn
-    </p>
-
-    <p>Ta kontakt for tilgjengelighet.</p>
   </div>
+</div>
 
-
-  <!-- TOM BOKS 1 -->
-  <div class="card">
-    <h3>Kommer snart</h3>
-    <p>Her kan du legge inn nytt utstyr senere.</p>
-  </div>
-
-  <!-- TOM BOKS 2 -->
-  <div class="card">
-    <h3>Kommer snart</h3>
-    <p>Plass til fremtidig utleie.</p>
-  </div>
-
-  <!-- TOM BOKS 3 -->
-  <div class="card">
-    <h3>Kommer snart</h3>
-    <p>Ny maskin kan legges inn her.</p>
-  </div>
-
-  <!-- TOM BOKS 4 -->
-  <div class="card">
-    <h3>Kommer snart</h3>
-    <p>Ledig plass for nytt utstyr.</p>
-  </div>
-
-  <!-- TOM BOKS 5 -->
-  <div class="card">
-    <h3>Kommer snart</h3>
-    <p>Utvides etter behov.</p>
-  </div>
-
-</section>
+</body>
+</html>
