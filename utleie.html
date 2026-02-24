@@ -14,7 +14,7 @@
 
 body{
   margin:0;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family:'Segoe UI', Arial, sans-serif;
   background:var(--bg);
   color:#333;
 }
@@ -29,18 +29,17 @@ body{
 
 .header h1{
   margin:0;
-  font-size:2.4rem;
-}
-
-/* CONTAINER */
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:60px 20px;
+  font-size:2.2rem;
 }
 
 /* GRID */
-.utleie-grid{
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+.grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   gap:40px;
@@ -50,8 +49,9 @@ body{
 .card{
   background:white;
   border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  padding:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  cursor:pointer;
   transition:0.35s ease;
 }
 
@@ -60,74 +60,83 @@ body{
   box-shadow:0 20px 45px rgba(0,0,0,0.12);
 }
 
-/* IMAGE GALLERY */
-.gallery{
-  display:flex;
-  overflow:hidden;
-}
-
-.gallery img{
+.card img{
   width:100%;
   height:220px;
   object-fit:cover;
-  transition:0.5s ease;
+  border-radius:14px;
+  margin-bottom:15px;
 }
 
-.card:hover img{
-  transform:scale(1.05);
-}
-
-/* CONTENT */
-.card-content{
-  padding:25px;
-}
-
-.card-content h2{
-  margin-top:0;
+.card h2{
+  margin:10px 0;
   color:var(--green);
 }
 
 .price{
   font-weight:bold;
   font-size:1.1rem;
-  margin:15px 0;
+  margin-top:10px;
 }
 
-.deposit{
-  font-size:0.95rem;
-  color:#666;
+/* DETAIL BOX */
+.detail{
+  display:none;
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px solid #e5e5e5;
 }
 
-.button{
-  display:inline-block;
-  margin-top:15px;
-  padding:10px 20px;
+.gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.gallery img{
+  height:180px;
+  border-radius:12px;
+}
+
+/* FORM */
+form input, form textarea{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  margin-bottom:12px;
+}
+
+button{
+  padding:12px 25px;
   background:var(--green);
   color:white;
-  text-decoration:none;
+  border:none;
   border-radius:8px;
-  transition:0.3s;
+  cursor:pointer;
 }
 
-.button:hover{
+button:hover{
   background:var(--green-dark);
 }
 
-/* KOMMER SNART */
-.coming{
-  background:#eef2ec;
-  border:2px dashed #cfd8cc;
-  border-radius:18px;
-  padding:40px;
-  text-align:center;
-  color:#6b7c70;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .header h1{font-size:1.8rem;}
+.back{
+  display:inline-block;
+  margin-top:15px;
+  color:var(--green);
+  cursor:pointer;
+  font-size:0.9rem;
 }
 </style>
+
+<script>
+function toggleDetail(id){
+  let detail = document.getElementById(id);
+  detail.style.display = detail.style.display === "block" ? "none" : "block";
+}
+</script>
+
 </head>
 <body>
 
@@ -137,40 +146,86 @@ body{
 </div>
 
 <div class="container">
-  <div class="utleie-grid">
+  <div class="grid">
 
     <!-- RENSEMASKIN -->
-    <a href="rensemaskin.html" class="card-link">
-  <div class="card">
-      <div class="gallery">
-        <img src="rensemaskin1.jpg" alt="Rensemaskin">
-      </div>
-      <div class="card-content">
-        <h2>Rensemaskin</h2>
-        <p>Kraftig rensemaskin for tepper, møbler og bilinteriør. Enkel i bruk og gir profesjonelt resultat.</p>
-        <div class="price">400 kr per døgn</div>
-        <div class="deposit">Depositum: 500 kr</div>
-        <a href="index.html#kontakt" class="button">Reserver</a>
+    <div class="card" onclick="toggleDetail('rense')">
+      <img src="rense1.jpg" alt="Rensemaskin">
+      <h2>Rensemaskin</h2>
+      <p>Klikk for mer informasjon</p>
+      <div class="price">400 kr per døgn</div>
+
+      <div class="detail" id="rense">
+
+        <div class="gallery">
+          <img src="rense1.jpg">
+          <img src="rense2.jpg">
+        </div>
+
+        <p>Kraftig rensemaskin for tepper, møbler og bilinteriør.
+        Enkel i bruk og gir profesjonelt resultat.</p>
+
+        <p><strong>Depositum:</strong> 500 kr</p>
+
+        <h3>Leiebetingelser</h3>
+        <ul>
+          <li>Leveres rengjort</li>
+          <li>Leietaker ansvarlig for skade</li>
+          <li>Betaling ved henting</li>
+        </ul>
+
+        <h3>Send forespørsel</h3>
+
+        <form action="mailto:tommypettersen_9@hotmail.com?subject=Forespørsel Rensemaskin"
+              method="post" enctype="text/plain">
+
+          <input type="text" name="Navn" placeholder="Navn" required>
+          <input type="email" name="Epost" placeholder="E-post" required>
+          <textarea name="Melding" rows="5"
+            placeholder="Når ønsker du å leie?" required></textarea>
+
+          <button type="submit">Send forespørsel</button>
+        </form>
+
+        <div class="back" onclick="toggleDetail('rense')">Lukk</div>
+
       </div>
     </div>
+
 
     <!-- JORDFRES -->
-    <div class="card">
-      <div class="gallery">
-        <img src="jordfres1.jpg" alt="Jordfres">
-      </div>
-      <div class="card-content">
-        <h2>Jordfres</h2>
-        <p>Effektiv jordfres for hage og mindre jordbruksarbeid. Enkel å håndtere og gir godt resultat.</p>
-        <div class="price">500 kr per døgn</div>
-        <a href="index.html#kontakt" class="button">Sjekk tilgjengelighet</a>
-      </div>
-    </div>
+    <div class="card" onclick="toggleDetail('fres')">
+      <img src="jordfres1.jpg" alt="Jordfres">
+      <h2>Jordfres</h2>
+      <p>Klikk for mer informasjon</p>
+      <div class="price">500 kr per døgn</div>
 
-    <!-- KOMMER SNART -->
-    <div class="coming">
-      <h2>Kommer snart</h2>
-      <p>Nytt utstyr legges til fortløpende.</p>
+      <div class="detail" id="fres">
+
+        <div class="gallery">
+          <img src="jordfres1.jpg">
+          <img src="jordfres2.jpg">
+        </div>
+
+        <p>Effektiv jordfres for hage og mindre jordbruksarbeid.
+        Enkel å håndtere og gir godt resultat.</p>
+
+        <h3>Send forespørsel</h3>
+
+        <form action="mailto:tommypettersen_9@hotmail.com?subject=Forespørsel Jordfres"
+              method="post" enctype="text/plain">
+
+          <input type="text" name="Navn" placeholder="Navn" required>
+          <input type="email" name="Epost" placeholder="E-post" required>
+          <textarea name="Melding" rows="5"
+            placeholder="Når ønsker du å leie?" required></textarea>
+
+          <button type="submit">Send forespørsel</button>
+        </form>
+
+        <div class="back" onclick="toggleDetail('fres')">Lukk</div>
+
+      </div>
     </div>
 
   </div>
@@ -178,5 +233,3 @@ body{
 
 </body>
 </html>
-</div>
-</a>
