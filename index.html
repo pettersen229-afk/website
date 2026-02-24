@@ -14,7 +14,6 @@
   --green-bg:#f7f8f5;
 }
 
-/* BASE */
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -23,14 +22,12 @@ body {
   line-height: 1.7;
 }
 
-/* TOPPMENY */
 .top-menu {
   background: white;
   border-bottom: 1px solid #e0e6dc;
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(6px);
 }
 
 .menu-inner {
@@ -46,8 +43,6 @@ body {
   font-weight: 600;
   color: var(--green-main);
   text-decoration: none;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
 }
 
 .menu-links a {
@@ -55,190 +50,69 @@ body {
   text-decoration: none;
   color: #4a5c4f;
   font-weight: 500;
-  position: relative;
 }
 
-.menu-links a::after{
-  content:"";
-  position:absolute;
-  width:0;
-  height:2px;
-  background:var(--green-main);
-  bottom:-4px;
-  left:0;
-  transition:0.3s ease;
-}
-
-.menu-links a:hover::after{
-  width:100%;
-}
-
-/* HEADER */
 header {
   background:
     linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
     url("header.png");
   background-size: cover;
-  background-position: center top;
+  background-position: center;
   min-height: 75vh;
   color: white;
-  padding: 120px 20px;
-  text-align: center;
   display:flex;
-  flex-direction:column;
+  align-items:center;
   justify-content:center;
+  flex-direction:column;
+  text-align:center;
+  padding: 20px;
 }
 
 header h1 {
   font-size: 3rem;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
 }
 
-/* SECTION */
 section {
   max-width: 1100px;
   margin: auto;
-  padding: 90px 20px;
+  padding: 80px 20px;
 }
 
 h2 {
   text-align: center;
   color: var(--green-main);
-  margin-bottom: 50px;
-  font-size: 2rem;
+  margin-bottom: 40px;
 }
 
-/* GRID */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 25px;
 }
 
-/* CARD */
 .card {
   background: white;
   padding: 30px;
   border-radius: 18px;
-  border: 1px solid #e6ebe2;
-  text-decoration: none;
-  color: #2f4033;
-  transition: all 0.35s ease;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.04);
-  position: relative;
-  overflow: hidden;
-}
-
-.card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:4px;
-  background:var(--green-main);
-  transform:scaleX(0);
-  transform-origin:left;
-  transition:0.35s ease;
-}
-
-.card:hover::before{
-  transform:scaleX(1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  text-decoration:none;
+  color:#2f4033;
+  transition:0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+  transform:translateY(-6px);
 }
 
-.card h3 {
-  margin-top: 0;
-  color: var(--green-main);
-}
-
-/* FACEBOOK */
-#facebook {
-  background: var(--green-soft);
-  border-radius: 24px;
-  padding: 60px 20px;
-  margin-top: 40px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
-  text-align: center;
-}
-
-/* KONTAKT */
-.kontakt-boks {
-  max-width: 600px;
-  margin: auto;
-  background: white;
-  padding: 35px;
-  border-radius: 18px;
-  border: 1px solid #e0e6dc;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.kontakt-boks input,
-.kontakt-boks textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #d6ddd2;
-  margin-top: 6px;
-  transition:0.2s;
-}
-
-.kontakt-boks input:focus,
-.kontakt-boks textarea:focus{
-  outline:none;
-  border-color:var(--green-main);
-  box-shadow:0 0 0 3px rgba(74,107,79,0.15);
-}
-
-.kontakt-boks button {
-  margin-top: 15px;
-  padding: 12px 24px;
-  border: none;
-  background: var(--green-main);
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
-
-.kontakt-boks button:hover {
-  background: var(--green-dark);
-  transform: translateY(-2px);
-}
-
-.kart-lenke {
-  display: inline-block;
-  margin-top: 20px;
-  color: var(--green-main);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.kart-lenke:hover {
-  text-decoration: underline;
-}
-
-/* FOOTER */
 footer {
   background: var(--green-dark);
   color: white;
   text-align: center;
-  padding: 50px 20px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  header h1 { font-size: 2.2rem; }
-  .menu-links { display:none; }
+  padding: 40px 20px;
 }
 </style>
 </head>
+
 <body>
 
 <nav class="top-menu">
@@ -248,8 +122,6 @@ footer {
       <a href="#produkter">Produkter</a>
       <a href="#tjenester">Tjenester</a>
       <a href="#verdier">Verdier</a>
-      <a href="#butikk">Nettbutikk</a>
-      <a href="#facebook">Facebook</a>
       <a href="#kontakt">Kontakt</a>
     </div>
   </div>
@@ -260,8 +132,44 @@ footer {
   <p>Økologisk drift med respekt for natur, dyr og mennesker</p>
 </header>
 
-<!-- RESTEN AV INNHOLDET DITT ER HELT LIKT -->
-<!-- Du kan lime inn seksjonene dine her under akkurat som før -->
+<section id="produkter">
+  <h2>Våre produkter</h2>
+  <div class="cards">
+    <div class="card">Egg</div>
+    <div class="card">Ved</div>
+    <div class="card">Grønnsaker</div>
+    <div class="card">Bifolk</div>
+  </div>
+</section>
+
+<section id="tjenester">
+  <h2>Våre tjenester</h2>
+  <div class="cards">
+    <a href="utleie.html" class="card">Utleie</a>
+    <div class="card">Rådgivning</div>
+    <div class="card">Andre tjenester</div>
+  </div>
+</section>
+
+<section id="verdier">
+  <h2>Våre verdier</h2>
+  <div class="cards">
+    <div class="card">Økologisk drift</div>
+    <div class="card">Dyrevelferd</div>
+    <div class="card">Langsiktighet</div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <h2>Kontakt oss</h2>
+  <p style="text-align:center;">Tlf: 977 29 948<br>
+  E-post: tommypettersen_9@hotmail.com</p>
+</section>
+
+<footer>
+  <p><strong>MarhaugenGård ANS</strong></p>
+  <p>Bardalsveien 259, 8897 Bardal</p>
+</footer>
 
 </body>
 </html>
