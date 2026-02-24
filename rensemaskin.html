@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rensemaskin – Marhaugengård</title>
+
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI', Arial, sans-serif;
+  background:#f7f8f5;
+  color:#333;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+h1{
+  color:#4a6b4f;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin-bottom:30px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:14px;
+  object-fit:cover;
+}
+
+.box{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  margin-bottom:30px;
+}
+
+form input, form textarea{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  margin-bottom:12px;
+}
+
+button{
+  padding:12px 25px;
+  background:#4a6b4f;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#2f4033;
+}
+
+.back{
+  display:inline-block;
+  margin-bottom:30px;
+  color:#4a6b4f;
+  text-decoration:none;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<a href="utleie.html" class="back">← Tilbake til utleie</a>
+
+<h1>Rensemaskin til utleie</h1>
+
+<div class="gallery">
+  <img src="rense1.jpg">
+  <img src="rense2.jpg">
+</div>
+
+<div class="box">
+  <p>Kraftig rensemaskin for tepper, møbler og bilinteriør.</p>
+  <p><strong>Pris:</strong> 400 kr per døgn</p>
+  <p><strong>Depositum:</strong> 500 kr</p>
+
+  <h3>Leiebetingelser</h3>
+  <ul>
+    <li>Maskinen leveres rengjort</li>
+    <li>Leietaker ansvarlig for skade</li>
+    <li>Betaling ved henting</li>
+  </ul>
+</div>
+
+<div class="box">
+  <h3>Send forespørsel</h3>
+  <form action="mailto:tommypettersen_9@hotmail.com?subject=Forespørsel Rensemaskin"
+        method="post" enctype="text/plain">
+
+    <input type="text" name="Navn" placeholder="Navn" required>
+    <input type="email" name="Epost" placeholder="E-post" required>
+    <textarea name="Melding" rows="5"
+      placeholder="Når ønsker du å leie?" required></textarea>
+
+    <button type="submit">Send forespørsel</button>
+  </form>
+</div>
+
+</div>
+</body>
+</html>
