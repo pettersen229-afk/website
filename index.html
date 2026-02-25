@@ -8,167 +8,278 @@
 
 <style>
 :root{
-  --green-main:#4a6b4f;
+  --green:#4a6b4f;
   --green-dark:#2f4033;
-  --green-soft:#eef2ec;
-  --green-bg:#f7f8f5;
+  --green-light:#eef2ec;
+  --bg:#f7f8f5;
 }
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background-color: var(--green-bg);
-  color: #333;
-  line-height: 1.7;
+body{
+  margin:0;
+  font-family:'Segoe UI', Arial, sans-serif;
+  background:var(--bg);
+  color:#333;
+  line-height:1.6;
 }
 
-.top-menu {
-  background: white;
-  border-bottom: 1px solid #e0e6dc;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+/* NAV */
+nav{
+  background:white;
+  border-bottom:1px solid #e0e6dc;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-.menu-inner {
-  max-width: 1100px;
-  margin: auto;
-  padding: 14px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.nav-inner{
+  max-width:1100px;
+  margin:auto;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.logo {
-  font-weight: 600;
-  color: var(--green-main);
-  text-decoration: none;
+.logo{
+  font-weight:600;
+  color:var(--green);
+  text-decoration:none;
+  font-size:1.1rem;
 }
 
-.menu-links a {
-  margin-left: 22px;
-  text-decoration: none;
-  color: #4a5c4f;
-  font-weight: 500;
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#4a5c4f;
+  font-weight:500;
 }
 
-header {
+nav a:hover{
+  color:var(--green);
+}
+
+/* HERO */
+header{
   background:
     linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
     url("header.png");
-  background-size: cover;
-  background-position: center;
-  min-height: 75vh;
-  color: white;
+  background-size:cover;
+  background-position:center;
+  min-height:80vh;
   display:flex;
   align-items:center;
   justify-content:center;
-  flex-direction:column;
   text-align:center;
-  padding: 20px;
+  color:white;
+  padding:20px;
 }
 
-header h1 {
-  font-size: 3rem;
+header h1{
+  font-size:3rem;
+  margin-bottom:10px;
 }
 
-section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 20px;
+/* SECTION */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:90px 20px;
 }
 
-h2 {
-  text-align: center;
-  color: var(--green-main);
-  margin-bottom: 40px;
+h2{
+  text-align:center;
+  color:var(--green);
+  margin-bottom:50px;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
 }
 
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+.card{
+  background:white;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
   text-decoration:none;
   color:#2f4033;
   transition:0.3s ease;
 }
 
-.card:hover {
+.card:hover{
   transform:translateY(-6px);
 }
 
-footer {
-  background: var(--green-dark);
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
+.icon{
+  font-size:2.5rem;
+  margin-bottom:15px;
+}
+
+/* FACEBOOK */
+#facebook{
+  background:var(--green-light);
+  border-radius:24px;
+  padding:60px 20px;
+  text-align:center;
+}
+
+/* CONTACT */
+.contact-box{
+  background:white;
+  padding:35px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  max-width:600px;
+  margin:auto;
+}
+
+.contact-box input,
+.contact-box textarea{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  margin-bottom:12px;
+}
+
+button{
+  padding:12px 25px;
+  background:var(--green);
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:var(--green-dark);
+}
+
+/* MAP */
+.map{
+  margin-top:40px;
+  border-radius:18px;
+  overflow:hidden;
+}
+
+/* FOOTER */
+footer{
+  background:var(--green-dark);
+  color:white;
+  text-align:center;
+  padding:40px 20px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  header h1{font-size:2.2rem;}
 }
 </style>
 </head>
 
 <body>
 
-<nav class="top-menu">
-  <div class="menu-inner">
+<!-- FACEBOOK SDK -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/nb_NO/sdk.js#xfbml=1&version=v18.0">
+</script>
+
+<nav>
+  <div class="nav-inner">
     <a href="index.html" class="logo">Marhaugengård</a>
-    <div class="menu-links">
+    <div>
       <a href="#produkter">Produkter</a>
       <a href="#tjenester">Tjenester</a>
       <a href="#verdier">Verdier</a>
+      <a href="#facebook">Facebook</a>
       <a href="#kontakt">Kontakt</a>
     </div>
   </div>
 </nav>
 
 <header>
-  <h1>Marhaugengård</h1>
-  <p>Økologisk drift med respekt for natur, dyr og mennesker</p>
+  <div>
+    <h1>Marhaugengård</h1>
+    <p>Økologisk drift med respekt for natur, dyr og mennesker</p>
+  </div>
 </header>
 
 <section id="produkter">
   <h2>Våre produkter</h2>
   <div class="cards">
-    <div class="card">Egg</div>
-    <div class="card">Ved</div>
-    <div class="card">Grønnsaker</div>
-    <div class="card">Bifolk</div>
+    <div class="card"><div class="icon">🥚</div><h3>Egg</h3><p>Økologiske egg fra frittgående høner.</p></div>
+    <div class="card"><div class="icon">🪵</div><h3>Ved</h3><p>Kortreist ved tilpasset nordnorsk klima.</p></div>
+    <div class="card"><div class="icon">🥕</div><h3>Grønnsaker</h3><p>Sesongbasert produksjon.</p></div>
+    <div class="card"><div class="icon">🐝</div><h3>Bifolk</h3><p>Salg og utvikling av bifolk.</p></div>
   </div>
 </section>
 
 <section id="tjenester">
   <h2>Våre tjenester</h2>
   <div class="cards">
-    <a href="utleie.html" class="card">Utleie</a>
-    <div class="card">Rådgivning</div>
-    <div class="card">Andre tjenester</div>
+    <a href="utleie.html" class="card">
+      <div class="icon">🚜</div>
+      <h3>Utleie</h3>
+      <p>Maskiner og utstyr tilgjengelig for gårdsarbeid.</p>
+    </a>
+    <div class="card"><div class="icon">📋</div><h3>Rådgivning</h3></div>
+    <div class="card"><div class="icon">🌲</div><h3>Andre tjenester</h3></div>
   </div>
 </section>
 
 <section id="verdier">
   <h2>Våre verdier</h2>
   <div class="cards">
-    <div class="card">Økologisk drift</div>
-    <div class="card">Dyrevelferd</div>
-    <div class="card">Langsiktighet</div>
+    <div class="card"><div class="icon">🌱</div><h3>Økologisk drift</h3></div>
+    <div class="card"><div class="icon">🐓</div><h3>Dyrevelferd</h3></div>
+    <div class="card"><div class="icon">🌍</div><h3>Langsiktighet</h3></div>
+  </div>
+</section>
+
+<section id="facebook">
+  <h2>Følg oss på Facebook</h2>
+  <div style="display:flex; justify-content:center;">
+    <div class="fb-page"
+         data-href="https://www.facebook.com/profile.php?id=61583430581251"
+         data-tabs="timeline"
+         data-width="500"
+         data-height="600"
+         data-adapt-container-width="true">
+    </div>
   </div>
 </section>
 
 <section id="kontakt">
   <h2>Kontakt oss</h2>
-  <p style="text-align:center;">Tlf: 977 29 948<br>
-  E-post: tommypettersen_9@hotmail.com</p>
+
+  <div class="contact-box">
+    <form action="mailto:tommypettersen_9@hotmail.com"
+          method="post" enctype="text/plain">
+      <input type="text" name="Navn" placeholder="Navn" required>
+      <input type="email" name="Epost" placeholder="E-post" required>
+      <textarea name="Melding" rows="6" placeholder="Din melding" required></textarea>
+      <button type="submit">Send melding</button>
+    </form>
+
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps?q=Bardalsveien+259+8897+Bardal&output=embed"
+        width="100%" height="300" style="border:0;" allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
 </section>
 
 <footer>
   <p><strong>MarhaugenGård ANS</strong></p>
   <p>Bardalsveien 259, 8897 Bardal</p>
+  <p>Tlf: 977 29 948</p>
+  <p>Org.nr: 933 100 367 MVA</p>
 </footer>
 
 </body>
