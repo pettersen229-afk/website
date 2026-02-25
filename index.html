@@ -71,13 +71,15 @@ nav a:hover::after{
 }
 
 /* HERO */
-header{
+/* HERO PREMIUM */
+.hero{
   background:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
     url("header.png");
   background-size:cover;
   background-position:center;
-  min-height:80vh;
+  background-attachment:fixed;
+  min-height:90vh;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -86,9 +88,38 @@ header{
   padding:20px;
 }
 
-header h1{
-  font-size:3rem;
-  margin-bottom:10px;
+.hero-content{
+  background:rgba(0,0,0,0.35);
+  backdrop-filter:blur(6px);
+  padding:40px 50px;
+  border-radius:20px;
+  max-width:700px;
+}
+
+.hero h1{
+  font-size:3.5rem;
+  margin-bottom:15px;
+}
+
+.hero p{
+  font-size:1.2rem;
+  margin-bottom:25px;
+}
+
+.hero-btn{
+  display:inline-block;
+  padding:14px 30px;
+  background:var(--green);
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:600;
+  transition:0.3s ease;
+}
+
+.hero-btn:hover{
+  background:var(--green-dark);
+  transform:translateY(-3px);
 }
 
 /* SECTION */
@@ -247,10 +278,11 @@ footer{
   </div>
 </nav>
 
-<header>
-  <div>
+<header class="hero">
+  <div class="hero-content">
     <h1>Marhaugengård</h1>
     <p>Økologisk drift med respekt for natur, dyr og mennesker</p>
+    <a href="#produkter" class="hero-btn">Se våre produkter</a>
   </div>
 </header>
 
